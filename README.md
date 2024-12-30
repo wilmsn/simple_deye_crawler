@@ -25,14 +25,14 @@ Getting started:
 
 2b) Edit "get_deye.sh"
 
-	    FHEM_CUR=<FHEM dummy for current power>
-	    FHEM_DAY=<FHEM dummy for  power of this day>
-	    FHEM_TOT=<FHEM dummy for total power>
+	FHEM_CUR=<FHEM dummy for current power>
+	FHEM_DAY=<FHEM dummy for power of this day>
+	FHEM_TOT=<FHEM dummy for total power>
 	
 
 3) Add the script to your crontab
 
-	0,5,10,15,20,25,30,35,40,45,50,55 * * * * <path to script>/get_deye.sh <ip of Deye> <user> <password>2>/dev/null >> /tmp/get_deye.log
+	0,5,10,15,20,25,30,35,40,45,50,55 * * * * PATH_TO_SCRIPT/get_deye.sh  INVERTER-IP USER PASSWORD 2>/dev/null >> /tmp/get_deye.log
 		
 4) Have fun
 
@@ -40,5 +40,5 @@ Use on your own risk!
 
 Tested on Inverter "SUN-M80G3-EU-Q0" with Firmware "MW3_16U_5408_5.0C-S"
 
-Version 0.1 testing
+Version 0.2 testing
  
