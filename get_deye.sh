@@ -24,19 +24,16 @@ if [ $? -eq 0 ]; then
 
   echo "Aktuelle Leistung:" ${POWAKT}
   echo "Tagesleistung:    " ${POWDAY}
-  echo ${POWDAYNUM}
   echo "Gesamtleistung:   " ${POWTOT}
-  echo ${POWTOTNUM}
 
   ${MYDIR}/tn_fhem.php ${FHEM_CUR} ${POWAKT}
 
-  ${MYDIR}/tn_fhem.php ${FHEM_DAY} ${POWDAY}
-
   if [ "${POWTOTNUM}" -gt 0 ]; then
+    ${MYDIR}/tn_fhem.php ${FHEM_DAY} ${POWDAY}
     ${MYDIR}/tn_fhem.php ${FHEM_TOT} ${POWTOT}
   fi
 
 else
-  echo "Deye offline"
+  echo "Deye Inverter offline"
 fi
 

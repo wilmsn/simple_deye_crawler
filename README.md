@@ -40,5 +40,5 @@ Use on your own risk!
 
 Tested on Inverter "SUN-M80G3-EU-Q0" with Firmware "MW3_16U_5408_5.0C-S"
 
-Version 0.2 testing
+Version 1.0
  
